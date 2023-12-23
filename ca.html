@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+  button{
+    width: 50px;
+    height:50px;
+    font-size:20px;
+    background-color:blue;
+    border-radius:10px;
+    margin:5px;
+  }
+  input[type="text"]{
+    width:150px;
+    height:50px;
+    font-size:20px;
+    border-radius:10px;
+  }
+#caculator{
+  background-color:lightblue;
+  width:300px;
+  margin: 0 auto;
+  border-radius:10px; 
+  padding:20px ;
+ }
+  
+
+
+
+  
+</style>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+<script> 
+    function buttonValue(funvalue){
+    if(funvalue=="C"){  
+      document.getElementById("total").value=""; 
+    }else if(funvalue=="="){
+      document.getElementById("total").value=eval(document.getElementById("total").value)   
+      
+    }else{ 
+      document.getElementById("total").value=document.getElementById("total").value+funvalue
+    }
+      }
+function chcolor(color){
+  document.getElementById("caculator").style.background=color;
+}
+
+     
+  
+</script> 
+  
+</head>
+
+<body>
+<body id="bodycoior">
+<div id="caculator">  
+ <input type="text" id="total" value="">
+  
+  <input type="radio" name="color" id="color1" onclick="chcolor('pink')">pink
+  <input type="radio" name="color" id="color2" onclick="chcolor('yellow')">yellow
+
+
+
+
+
+  
+  <br>
+ <BUTTON type="button" VALUE='1' onclick="buttonValue('1')">1</BUTTON>
+ <BUTTON type="button"VALUE='2'onclick="buttonValue('2')">2</BUTTON>
+ <BUTTON type="button" VALUE='3'onclick="buttonValue('3')">3</BUTTON> 
+ <BUTTON type="button"VALUE='+'onclick="buttonValue('+')"class="colorCss">+</BUTTON>
+<br>
+  <BUTTON type="button"VALUE='4'onclick="buttonValue('4')">4</BUTTON>
+  <BUTTON type="button"VALUE='5'onclick="buttonValue('5')">5</BUTTON>
+  <BUTTON type="button"VALUE='6'onclick="buttonValue('6')">6</BUTTON>
+  <BUTTON type="button"VALUE='-'onclick="buttonValue('-')"class="colorCss">-</BUTTON>
+<br>
+  <BUTTON type="button"VALUE='7'onclick="buttonValue('7')">7</BUTTON>
+  <BUTTON type="button"VALUE='8'onclick="buttonValue('8')">8</BUTTON>
+  <BUTTON type="button"VALUE='9'onclick="buttonValue('9')">9</BUTTON>
+  <BUTTON type="button"VALUE='*'onclick="buttonValue('*')"class="colorCss">x</BUTTON>
+<br>  
+   <BUTTON type="button"VALUE='C'onclick="buttonValue('C')">C</BUTTON>
+  <BUTTON type="button"VALUE='0'onclick="buttonValue('0')">0</BUTTON>
+  <BUTTON type="button"VALUE='='onclick="buttonValue('=')">=</BUTTON>
+  <BUTTON type="button"VALUE='/'onclick="buttonValue('/')"class="colorCss">/</BUTTON>
+</div>
+
+  
+</body>
+
+</html>    
